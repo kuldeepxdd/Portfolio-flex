@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Fixed navigation bar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #EEEEEE ;
+    box-shadow: 7px 8px 8px -8px #000000;
+    z-index: 1000;
+}
+
+body{
+    background-color: white;
+    
+}
+/* Navigation container */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Navigation list */
+.nav-left, .nav-right {
+    display: flex;
+    list-style: none;
+}
+
+.nav-right li a:hover{
+    background-color: transparent;
+    color: gray;
+    /* text-decoration: underline; */
+}
+
+/* Styling the links inside navigation */
+.nav-right li a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Make text black */
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+/* Spacing between right-side nav items */
+.nav-right {
+    gap: 15px;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: row;  /* Keep items in a row */
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 15px;
+    }
+
+    .nav-left img {
+        width: 30px; /* Adjust logo size */
+    }
+
+    /* Keep navigation links in a row */
+    .nav-right {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .nav-right li {
+        text-align: center;
+    }
+
+    .nav-right li a {
+        font-size: 14px;  /* Reduce font size */
+        padding: 5px 8px; /* Adjust padding */
+        display: inline-block;
+    }
+}
+/* Adding margin to main content so it doesn't get hidden by fixed navbar */
+main {
+    margin-top: 90px;
+    padding: 20px;
+    /* flex: 1; */
+    /* background-color: #D98324; */
+}
+
+/* Main Sections */
+.first-main, .second-main {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content */
+    padding: 50px;
+    gap: 50px; /* Creates spacing between text and image */
+    
+}
+
+.first-main{
+    /* background-color: #98D2C0; */
+}
+/* First Section: Image on Right, Text on Left */
+.first-photo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.first-photo img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+}
+
+.first-content {
+    width: 50%;
+    text-align: center; /* Centers text content */
+    
+}
+
+.first-content h2,h3,p{
+    padding: 10px;
+}
+
+/* Second Section: Image on Right, Text on Left */
+.second-content {
+    width: 50%;
+    text-align: center; /* Centers text content */
+}
+
+.second-content h2,p{
+    padding: 10px;
+}
+
+.second-photo {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.second-photo img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ddd;
+}
+
+/* Resume Button */
+.my-resume {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* Button hover effect */
+.my-resume:hover {
+    background-color: #F6F0F0;
+    border: 2px solid;
+    color: black;
+    transform: scale(1.01);
+}
+
+/* Project Section Styling */
+.projects-section {
+    text-align: center;
+    padding: 40px 20px;
+    border-radius:20px ;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.projects-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Grid Layout for Projects */
+.Projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    
+}
+
+/* Project Card Styling */
+.Project-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.Project-card:hover {
+    transform: scale(1.07);
+    background-color: #F6F0F0;
+}
+
+.Project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.Project-card h4 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.Project-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+}
+
+/* Project Button */
+.project-btn {
+    padding: 10px 15px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;    
+    
+}
+
+.project-btn:hover {
+    background-color:white;
+    border: 2px solid;
+    color: black;
+    transform: scale(1.01);
+}
+
+
+.skills-section {
+    text-align: center;
+    color: #000;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    width: 90%;
+    max-width: 1000px; /* Increased width */
+    margin: auto;
+    margin-top: 40px;
+}
+
+/* Grid Container */
+.skill-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+/* Individual Skill Card */
+.contain {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    width: calc(33.33% - 40px); /* Ensures 3 items per row */
+    min-width: 180px;
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect (No Animation, Only Color Change) */
+.contain:hover {
+    background: #F6F0F0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+/* Skill Logos */
+.contain img {
+    width: 90px;
+    height: auto;
+}
+
+/* Skill Names */
+.contain h4 {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Flexbox Ensures Responsiveness */
+.skill-set > .contain {
+    flex: 1 1 250px; /* Ensures 3 items per row while allowing wrap */
+}
+
+/* Education Section */
+.education {
+    background-color: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 40px;
+
+}
+
+/* Individual Graduation Blocks */
+.graduation {
+    background-color:white;
+    border-radius: 15px;
+    /* padding: 20px; */
+    margin-top: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: left; /* Ensures all text is left-aligned */
+}
+
+/* Flexbox for Proper Alignment */
+.edu-row {
+    display: flex;
+    justify-content: space-between; /* College name on left, year on right */
+    align-items: center;
+    width: 100%;
+}
+
+/* Institution Name */
+.edu-row h3 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Year Alignment */
+.year {
+    text-align: right;
+    color: #555;
+}
+
+/* Degree and Score (Now Left Aligned) */
+.graduation p {
+    font-size: 16px;
+    color: #444;
+    margin: 5px 0;
+    text-align: left; /* Force text to align left */
+}
+
+/* Hover Effect */
+.graduation:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background-color: #F6F0F0;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Pushes footer down when content is less */
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border: none;
+    background: #222;
+    color: white;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+/* Submit Button */
+.submit-btn {
+    background: white;
+    border-radius: 20px;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color:black;
+    border: 2px solid white;
+    color: white; 
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    /* Adjust container widths for tablets */
+    .first-photo, .second-photo {
+        width: 50%;
+    }
+    
+    .first-content, .second-content {
+        width: 50%;
+    }
+
+    .Projects-grid {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 projects per row */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Stack main sections vertically on smaller screens */
+    .first-main, .second-main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .first-photo, .second-photo {
+        width: 80%;
+    }
+
+    .first-content, .second-content {
+        width: 90%;
+    }
+
+    /* Adjust project section for smaller screens */
+    .Projects-grid {
+        grid-template-columns: repeat(1, 1fr); /* Show 1 project per row */
+    }
+
+    .contain {
+        width: 100%; /* Full width for skills */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Make navigation menu more compact */
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-right {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Reduce image sizes */
+    .first-photo img, .second-photo img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .first-content h2, .second-content h2 {
+        font-size: 20px;
+    }
+
+    .Projects-grid, .skill-set {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust buttons */
+    .my-resume, .project-btn, .submit-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
